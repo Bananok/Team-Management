@@ -1,0 +1,105 @@
+@import '../../styles';
+
+.react-calendar-timeline {
+  background-color: $color-gray-extra-light;
+  border: 1px solid $color-gray-4;
+
+  .rct-header-root {
+    background-color: $color-gray-extra-light;
+    border: 1px solid $color-gray-4;
+
+    > div {
+      width: 302px !important;
+    }
+
+    .rct-calendar-header {
+      border: none;
+      border-left: 1px solid $color-gray-4;
+      width: calc(100% - 302px) !important;
+
+      .rct-dateHeader {
+        border: none;
+        border-right: 1px dashed $color-gray-4;
+      }
+
+      // .rct-dateHeader-primary {
+
+      // }
+    }
+  }
+  .rct-outer {
+
+    .rct-sidebar {
+      width: 302px !important;
+      .rct-sidebar-row {
+        background: $color-white;
+        border-bottom: none;
+
+        font-family: $typography-tertiary-ubuntu-medium-font-family;
+        font-weight: $typography-primary-font-weight;
+        font-size: $typography-secondary-font-size;
+        color: $color-head-1;
+
+        padding: 0 20px;
+        width: 302px !important;
+      }
+
+      .rct-sidebar-row-even {
+        background: $color-white;
+      }
+
+      .rct-sidebar-row-odd {
+        background: $color-white;
+      }
+    }
+
+    .rct-scroll {
+      border-left: none;
+
+      .rct-vertical-lines {
+        
+        .rct-vl {
+          border: none;
+          border-left: 1px dashed $color-gray-4;
+        }
+
+        .rct-day-6 {
+          background: repeating-linear-gradient(
+            135deg,
+            $color-gray-extra-light,
+            $color-gray-4 1px,
+            $color-gray-extra-light 4px,
+            $color-gray-extra-light 5px
+          );
+        }
+
+        .rct-day-0 {
+          background: repeating-linear-gradient(
+            135deg,
+            $color-gray-extra-light,
+            $color-gray-4 1px,
+            $color-gray-extra-light 4px,
+            $color-gray-extra-light 5px
+          );
+        }
+      }
+
+      .rct-horizontal-lines {
+
+        .rct-hl-odd {
+          border-bottom: none;
+          background: $color-white;
+        }
+
+        .rct-hl-even {
+          border-bottom: none;
+          background: $color-white;
+        }
+      }
+
+      .rct-items {
+        border-bottom: none;
+      }
+    }
+  }
+}

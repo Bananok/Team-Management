@@ -1,0 +1,174 @@
+@import 'variables';
+@import 'breakpoints';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: $typography-font-family, Sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+strong {
+  font-weight: $typography-accent-font-weight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h1 {
+  color: $color-primary;
+  font-size: $typography-primary-font-size;
+  font-weight: $typography-title-font-weight;
+  line-height: $typography-title-line-height;
+
+  @include small-tablet {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  color: $color-primary;
+  font-size: $typography-title-font-size;
+  font-weight: $typography-title-font-weight;
+
+  @include tablet {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  color: $color-secondary;
+  font-size: $typography-subtitle-font-size;
+  font-weight: $typography-subtitle-font-weight;
+}
+
+h4 {
+  color: $color-primary;
+  font-size: $typography-subtitle-font-size;
+  font-weight: $typography-primary-font-weight;
+}
+
+h5 {
+  color: $color-primary;
+  font-size: $typography-accent-font-size;
+  font-weight: $typography-accent-font-weight;
+
+  @include small-tablet {
+    font-size: 18px;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  overflow-wrap: break-word;
+  color: $color-black-text;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-text-font-weight;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+a {
+  font-weight: $typography-text-font-weight;
+  color: $color-white;
+  fill: $color-white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  color: $color-black-text;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-text-font-weight;
+  padding-bottom: 5px;
+  margin-left: 30px;
+
+  p {
+    display: inline;
+  }
+
+  &::before {
+    content: '';
+    background-color: $color-primary;
+    display: inline-block;
+    margin: 2px 15px 2px -30px;
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+}
+
+input,
+select,
+textarea {
+  font-family: $typography-font-family, Sans-serif;
+  font-size: $typography-text-font-size;
+  font-weight: $typography-text-font-weight;
+}
+
+button {
+  font-size: 30px;
+  font-weight: $typography-primary-font-weight;
+  font-family: $typography-font-family, Sans-serif;
+  background-color: $color-primary;
+  color: $color-white;
+  border: 2px solid $color-primary;
+  border-radius: 15px;
+  padding: 12px 39px;
+  margin: auto;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-primary;
+
+    a {
+      color: $color-primary;
+    }
+  }
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include small-tablet {
+    padding: 8px 34px;
+    border-radius: 9px;
+  }
+}
+
+button > a {
+  font-weight: 300 !important;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#root {
+  height: 100%;
+}
